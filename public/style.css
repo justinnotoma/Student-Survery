@@ -3,7 +3,7 @@
 
 :root {
     --body-width: 1900px;
-    --body-height: 1000px;
+    --body-height: 1500px;
     --header-font: 'Belanosima', sans-serif;
     --normal-text-font: 
 }
@@ -19,68 +19,77 @@ body {
 }
 
 
-/* Style for "container__website-body" */
+/* Styling for "container__website-body" */
 .container__website-body {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    gap: 12px;
 
     width: calc(var(--body-width) - 400px);
-    height: calc(var(--body-height) - 70px);
+    height: calc(var(--body-height) - 40px);
 
     background-color: lightblue;
     border-radius: 20px;
 }
 
 
-/* Style for "container__website-body" 'h2'  */
+/* Styling for "container__website-body" 'h2'  */
 .container__website-body h2 {
     color: black;
     font-size: 50px;
     font-family: var(--header-font);
 }
 
-/* Style for "container__all-question" */
+/* Styling for "container__all-question" */
 .container__all-question {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 5px;
 
     width: 100%;
     height: 675px;
 
-    border: 1px solid red;
-
-    /* Style for "container__question" */
+    
 }
+
+/* Styling for "container__question" */
 .container__question {
     display: flex;
     flex-direction: column;
 
     width: 96%;
     height: 25%;
-    border: 1px solid black;
+
 
     padding: 25px;
     font-family: var(--header-font);
 
+    & .text-input {
+        padding-left: 12px;
+
+        width: 96%;
+        height: 150px;
+
+        font-family: var(--normal-text-font);
+        font-size: 25px;
+    }
+    /* Styling for all "container__question" 'h2' */
     & h2 {
         align-items: start;
         font-size: 30px;
     }
 }
 
-/* Style for "container__all-btn" */
+/* Styling for "container__all-btn" */
 .container__all-btn {
     display: flex;
     justify-content: space-between;
 
     width: 96%;
     height: 150px;
-    /* border: 1px solid red; */
 
-    /* Style for "container__btn" */
+    /* Styling for "container__btn" */
     & .container__btn {
         display: flex;
         flex-direction: column;
@@ -90,12 +99,12 @@ body {
         width: calc(35px);
         height: 100%;
 
-        /* Style for 'p' */
+        /* Styling for 'p' */
         & p {
             font-family: var(--normal-text-font);
             font-size: 20px;
         }
-        /* Style for "ans-btn" */
+        /* Styling for "ans-btn" */
         & .ans-btn {
             
             width: 25px;
@@ -108,3 +117,34 @@ body {
     }
 }
 
+/* Styling for "container__sumbit-btn" */
+.container__sumbit-btn {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+
+    width: 600px;
+    height: 100px;    
+}
+
+/* Styling for "sumbit-btn" */
+    .sumbit-btn {
+        width: 90%;
+        height: 85%;
+
+        background-color: rgb(137, 205, 228);
+        border: none;
+        border-radius: 20px;
+
+        transition: all 0.5s;
+
+        /* Styling for all "sumnit-btn" 'strong' */
+        & strong {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 30px;
+        }
+    }
+
+.sumbit-btn:hover {
+    transform: scale(1.2);
+}
