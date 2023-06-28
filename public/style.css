@@ -5,7 +5,7 @@
     --body-width: 1900px;
     --body-height: 1500px;
     --header-font: 'Belanosima', sans-serif;
-    --normal-text-font: 
+    --normal-text-font: 'Lato', sans-serif;
 }
 
 body {
@@ -113,9 +113,16 @@ body {
             background-color: bisque;
             border: none;
             border-radius: 50%;
+
+            transition: all 0.5s;
         }
     }
 }
+
+.selected {
+    border: 1px solid blue;
+}
+
 
 /* Styling for "container__sumbit-btn" */
 .container__sumbit-btn {
@@ -147,4 +154,22 @@ body {
 
 .sumbit-btn:hover {
     transform: scale(1.2);
+}
+
+/* Change website base on the screen size */
+@media (max-width: 2000px)  {
+    :root {
+        --body-width: 1350px;
+        --body-height: 1300px;
+        --header-font: 'Belanosima', sans-serif;
+        --normal-text-font: 'Lato', sans-serif;
+    }
+
+    .container__website-body {
+        height: 100%
+    }
+
+    .container__all-question {
+        height: 40%;
+    }
 }
